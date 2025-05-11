@@ -49,8 +49,5 @@ class Server:
             "page_size must be greater than 0"
 
         data = self.__dataset
-        start, end = index_range(page, page_size)
-        if start >= len(data):
-            return []
-
+        [start, end] = index_range(page, page_size)
         return data[start:end]
