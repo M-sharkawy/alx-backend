@@ -64,7 +64,7 @@ class Server:
         while counter < page_size and next_index < len(indexed_data):
             item = indexed_data.get(next_index)
             if item:
-                data.append(indexed_data)
+                data.append(item)
                 counter += 1
                 next_index += 1
 
