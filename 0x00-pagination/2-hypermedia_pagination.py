@@ -63,7 +63,7 @@ class Server:
         - prev_page: previous page number or None
         - total_pages: total number of pages
         Implements HATEOAS link semantics for
-        pagination. :contentReference[oaicite:1]{index=1}
+        pagination.
         """
         assert isinstance(page, int) and page > 0, \
             "page must be a positive integer"
