@@ -20,13 +20,18 @@ babel = Babel(app)
 @babel.localeselector
 def get_locale() -> str:
     """returns the locale of a web page"""
+    langs = {"en": "en", "fr": "fr"}
+    if request.args.get('locale'):
+        locale = request.args.get('locale')
+        if locale in langs:
+            return langs[locale]
     return request.accept_languages.best_match(app.config["LANGUAGES"])
 
 
 @app.route("/")
 def home() -> str:
-    """render 3-index.html page"""
-    return render_template('3-index.html')
+    """render 4-index.html page"""
+    return render_template('4-index.html')
 
 
 if __name__ == "__main__":
