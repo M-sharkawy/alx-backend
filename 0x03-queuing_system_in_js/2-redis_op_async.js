@@ -27,9 +27,9 @@ const displaySchoolValue = async (schoolName) => {
 };
 
 const main = async () => {
-	displaySchoolValue('ALX');
+	await displaySchoolValue('ALX');
 	setNewSchool('ALXSanFrancisco', '100');
-	displaySchoolValue('ALXSanFrancisco');
+	await displaySchoolValue('ALXSanFrancisco');
 };
 
 main();
