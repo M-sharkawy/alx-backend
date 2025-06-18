@@ -12,7 +12,7 @@ client.on('connect', () => {
   console.log('Redis client connected to the server');
 });
 
-const sethash = (name, value) => {
+const setHash = (name, value) => {
   client.hset('ALX', name, value, print);
 };
 
